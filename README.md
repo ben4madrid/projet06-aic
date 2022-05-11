@@ -1,4 +1,4 @@
-# projet06-aic
+# OPENCLASSROOMS - AIC
 __________________________________________________________________
 # Projet 06 : Participez à la vie de la communauté Open Source    #
 __________________________________________________________________
