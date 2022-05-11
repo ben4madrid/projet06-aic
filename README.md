@@ -14,7 +14,7 @@ __________________________________________________________________
 ## Python ; Debian ; MariaDB
 - Version Python  Utilisé    : 2.7.14  https://www.python.org/downloads/release/python-377/
 - Version Debian  Utilisé    : 9.4.0   https://www.debian.org/distrib/netinst
-- Version MariaDB Utilisé    : 10.4    https://go.mariadb.com/
+- Version MariaDB Utilisé    : 10.1.18    https://go.mariadb.com/
 
 ## Installation du Serveur WEB sous Wordpress
 
