@@ -159,7 +159,7 @@ python3 ./backup.py
     > Cela permet d'assurer que l'upload est bien fini avant de le tester
       
 	  
-### OpenClassrooms - AIC - Benjamin M - 2022 ###
-### Remerciement à tous mes mentors sur OC ###
+#### OpenClassrooms - AIC - Benjamin M - 2022 ###
+#### Remerciement à tous mes mentors sur OC ###
 
 
