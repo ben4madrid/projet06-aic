@@ -99,7 +99,7 @@ En haut à droite sélectionnez votre nom du compte :
 > - Appuyez sur "Créer une clé d'accès"
 > - Sauvegarde votre fichier.csv #La clé secrète peut être consultée ou téléchargée uniquement au moment de la création.
 
-### Retour sur notre serveur WEB "aws configure"
+### Retour sur notre serveur WEB
 Modifier le fichier de configuration AWS avec la commande suivante dans une distribution Linux
 ```
 $ aws configure 
