@@ -14,8 +14,6 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Version Python 2.7.14 : https://www.cvedetails.com/vulnerability-list/vendor_id-10210/product_id-18230/Python-Python.html
+Version Debian 9.4.0 : https://www.cvedetails.com/vulnerability-list/vendor_id-23/product_id-36/opgpriv-1/Debian-Debian-Linux.html
+Version MariaDB 10.1.18 : https://www.cvedetails.com/vulnerability-list/vendor_id-12010/Mariadb.html
