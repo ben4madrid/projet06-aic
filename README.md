@@ -3,7 +3,7 @@ __________________________________________________________________
 # Projet 06 : Participez à la vie de la communauté Open Source    #
 __________________________________________________________________
 
-## Script de Sauvegarde de votre serveur Wordpress et sa base de Donnée vers AWS S3 #
+## Script de Sauvegarde de notre serveur Web avec le CMS Wordpress et sa base de Donnée vers AWS S3 #
 
 Le script permet de sauvegarder le dossier d'installation de wordpress en entier ainsi que le dump de la base de donnée Wordpress sur MariaDB
 
