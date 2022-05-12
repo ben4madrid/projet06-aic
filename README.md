@@ -125,11 +125,11 @@ __________________________________________________________________
 __________________________________________________________________
 
 ## Variable à modifier 
-
+```
 - HOMEPATH = 'Dossier de votre site Wordpress' #Exemple : /var/www/html
 - BACKUP_PATH = 'chemin de votre dossier de sauvegarde' #Exemple : /home/user/Sauvegarde
 - bucket = "NOM BUCKET S3" #Le nom de votre bucket sur AWS S3
-
+```
 ## Exécution
 - Le script exécute vérifie la présense du dossier Wordpress puis éxécute toute les fonctions dans le code principal.
 ```
@@ -146,7 +146,7 @@ python3 ./backup.py
   - Compression des fichiers à sauvegarder en tar.Bz2
     > def WPBackupTar
   - Temps d'attente entre l'éxécution de la fonction de suppréssion des fichiers local et l'upload sur S3 (*L125*)
-    - Cela permet d'assurer que l'upload est bien fini avant de le tester
+    > Cela permet d'assurer que l'upload est bien fini avant de le tester
       
 	  
 ### OpenClassrooms - AIC - Benjamin M - 2022 ###
