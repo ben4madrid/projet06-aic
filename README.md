@@ -63,12 +63,12 @@ tar xzvf latest.tar.gz
 chown -R www-data:www-data /var/www/html/*
 ```
 
-# Accès depuis le navigateur
+## Accès depuis le navigateur
 > - localhost/wordpress
 > - Son IP (exemple : 192.168.1.150)
 
 
-## Modules utilisés    
+# Modules utilisés    
 > -  os
 > -  sys
 > -  re
@@ -88,7 +88,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-## Création du compte AWS
+# Création du compte AWS
 Je suis débutant sur AWS. Comment créer et activer un nouveau compte AWS ?
 https://aws.amazon.com/fr/premiumsupport/knowledge-center/create-and-activate-aws-account/
 
@@ -99,7 +99,7 @@ En haut à droite sélectionnez votre nom du compte :
 > - Appuyez sur "Créer une clé d'accès"
 > - Sauvegarde votre fichier.csv #La clé secrète peut être consultée ou téléchargée uniquement au moment de la création.
 
-### Retour sur notre serveur WEB
+## Retour sur notre serveur WEB
 Modifier le fichier de configuration AWS avec la commande suivante dans une distribution Linux
 ```
 $ aws configure 
@@ -109,17 +109,17 @@ AWS Secret Access Key [None]: VOTRE KEY
 Default region name [None]: VOTRE REGION #Exemple : eu-west-3
 Default output format [None]: python
 ```
-### Création d'un bucket sur AWS S3
+## Création d'un bucket sur AWS S3
 - Pour télécharger vos données (photos, vidéos, documents, etc.) sur Amazon S3, vous devez d'abord créer un compartiment S3 dans l'une des régions AWS.
 - Un compartiment est un conteneur pour les objets stockés dans Amazon S3. Vous pouvez stocker n'importe quel nombre d'objets.
 - Suivre la documentation AWS https://docs.aws.amazon.com/fr_fr/AmazonS3/latest/user-guide/create-bucket.html 
 
 
-### MariaDB
+# MariaDB
 - Création d'un utilisateur avec les droits pour effectuer le dump de la base de donnée du site wordpress
 - Pas de chiffrement des credentials __ATTENTION AUX DROITS__ donnés
 
-##### Creation du MariaDB BUMP ########
+## Creation du MariaDB BUMP ########
 ```
 def WPDBDump(db_details):
 
