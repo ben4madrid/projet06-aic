@@ -119,16 +119,15 @@ Default output format [None]: python
 - Création d'un utilisateur avec les droits pour effectuer le dump de la base de donnée du site wordpress
 - Pas de chiffrement des credentials __ATTENTION AUX DROITS__ donnés
 
-##### Creation du MariaDB BUMP #####
-Détails supplémentaires BDD
+##### Creation du MariaDB BUMP ########
 ```
- def WPDBDump(db_details):
+def WPDBDump(db_details):
 
-     USER = db_details['user']
-     DBPASSWORD = db_details['mot_de_passe']
-     DBHOST = db_details['localhost']
-     DBNAME = db_details['wp_database']
-     [...]
+    USER = db_details['mon_user_admin'] #User admin de la BDD
+    DBPASSWORD = db_details['mon_mot_de_passe'] #Mot de passe de la BDD
+    DBHOST = db_details['localhost'] #BDD Héberger sur la machine
+    DBNAME = db_details['ma_base_de_donnees'] #Nom de ta table BDD
+    [...]
 ```
 
 __________________________________________________________________
