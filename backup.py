@@ -111,7 +111,7 @@ def Fileremove(bz2FILE,BACKUP_BDD,veriftoS3):
 
 
 ####### Main Code ################
-print ('##################### Backup running...###########################')
+print ('##################### Script Backup running...###########################')
 ####### Check if the path existing ################
 
 if os.path.isdir(HOMEPATH):
@@ -120,16 +120,16 @@ if os.path.isdir(HOMEPATH):
     DBINFO = WPregex(HOMEPATH)
     print ('##################### Dump BDD ###########################')
     BACKUP_BDD = WPDBDump(DBINFO)
-    print ('##################### ZIP des deux fichier ###########################')
+    print ('##################### Dossiers Wordpress et BDD ZIP ###########################')
     WPBackupTar(HOMEPATH,BACKUP_BDD)
-    print ('##################### Copie Vers AWS S3 ###########################')
+    print ('##################### Dossier Copie Vers AWS S3 ###########################')
     bz2FILE = (BACKUP_PATH+'sauvegarde'+str(BACKUP_DATE)+'.tar.bz2')
     CopietoS3(bz2FILE)
     print ('##################### Verification des fichiers sur AWS ###########################')
     veriftoS3(bz2FILE)
     time.sleep(8) # Waiting time to check the copy before file remove
     remove_on = veriftoS3(bz2FILE)
-    print ('##################### Supression fichiers Local###########################')
+    print ('##################### Supression des fichiers Local###########################')
     Fileremove(bz2FILE,BACKUP_BDD,veriftoS3)
 
 else:
