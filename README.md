@@ -18,7 +18,8 @@ __________________________________________________________________
 
 ## Installation du Serveur WEB sous Wordpress
 
-- Fixer l'adresse IP de notre serveur web puis ouvrez le fichier ```/etc/network/interfaces```
+- Fixer l'adresse IP de notre serveur web 
+> Ouvrez le fichier ```/etc/network/interfaces```
 Dans le fichier ```/etc/network/interfaces```, ajoutez les entrées suivantes et remplacez le caractère générique par l'adresse IPv4 principale du serveur :
 ```
 auto eth0
