@@ -21,8 +21,10 @@ __________________________________________________________________
 > Fixer l'adresse IP de notre serveur web
 
 Mise à jour du système
-> - apt update 
-> - apt upgrade -y
+```
+apt update 
+apt upgrade -y
+```
 
 Installation librairie
 > - apt install apache2 php libapache2-mod-php mysql-server php-mysql
