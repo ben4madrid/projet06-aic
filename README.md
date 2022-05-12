@@ -29,7 +29,7 @@ netmask <MASQUE SOUS RESEAU>
 gateway <PASSERELLE>
 ```
 > Pour redémarrer le réseau, entrez la commande suivante :
-```/etc/init.d/networking restart
+```/etc/init.d/networking restart```
 
 - Mise à jour du système
 ```
