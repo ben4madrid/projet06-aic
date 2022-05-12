@@ -24,11 +24,11 @@ import time
 from boto3 import client
 
 ##### Variables Initialisations #######
-HOMEPATH = '/var/www/html/wordpress'
+HOMEPATH = '/ton/chemin/dossier/wordpress' #Mettre le chemin du dossier Wordpress
 BACKUP_DATE = datetime.datetime.now().strftime("%d-%m-%Y-%H:%M:%S")
-BACKUP_PATH = '/home/sauvegarde/wordpress/'
+BACKUP_PATH = '/ton/chemin/dossier/sauvegarde/wordpress/' #Mettre le chemin du dossier de Sauvegarde
 BACKUP_NAME =  BACKUP_PATH+'/sauvegarde'+str(BACKUP_DATE)
-bucket = "projet06"
+bucket = "NOM_BUCKET" #Mettre le nom de ton Bucket S3
 ROOTDIR = '/usr/local/bin/'
 
 ##### Regex to get back login information to Database #######
@@ -45,20 +45,20 @@ def WPregex(HOMEPATH):
     user = re.search(regex_user,wpconfigcontent).group('USER')
     password = re.search(regex_pass,wpconfigcontent).group('PASSWORD')
     host = re.search(regex_host,wpconfigcontent).group('HOST')
-    return {'wpdatabase':database,
-                'wpadmin':user,
-                'wemakesure':password,
-                'localhost':host
+    return {'ma_base_de_donnees':database, #Nom de ta table BDD
+                'mon_user_admin':user, #User admin de la BDD
+                'mon_mot_de_passe':password, #Mot de passe de la BDD
+                'localhost':host #BDD Héberger sur la machine
                 }
 
 ##### Creation du MariaDB BUMP ########
 
 def WPDBDump(db_details):
 
-    USER = db_details['wpadmin']
-    DBPASSWORD = db_details['wemakesure']
-    DBHOST = db_details['localhost']
-    DBNAME = db_details['wpdatabase']
+    USER = db_details['mon_user_admin'] #User admin de la BDD
+    DBPASSWORD = db_details['mon_mot_de_passe'] #Mot de passe de la BDD
+    DBHOST = db_details['localhost'] #BDD Héberger sur la machine
+    DBNAME = db_details['ma_base_de_donnees'] #Nom de ta table BDD
     BACKUP_NAME_SQL = os.path.normpath(os.path.join(BACKUP_PATH+'/sauvegarde'+str(BACKUP_DATE)+'.sql')) # definition name of backup
     cmd = "mysqldump -h{} -u{} -p{} {} > {} ".format(\
         DBHOST, USER, DBPASSWORD, DBNAME, BACKUP_NAME_SQL)
