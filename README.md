@@ -135,14 +135,14 @@ __________________________________________________________________
 __________________________________________________________________
 
 ## Variable à modifier 
-```
-- HOMEPATH = 'Dossier de votre site Wordpress' #Exemple : /var/www/html
-- BACKUP_PATH = 'chemin de votre dossier de sauvegarde' #Exemple : /home/user/Sauvegarde
+```python
+- HOMEPATH = 'Dossier de votre site Wordpress' #Exemple : '/var/www/html'
+- BACKUP_PATH = 'chemin de votre dossier de sauvegarde' #Exemple : '/home/user/Sauvegarde'
 - bucket = "NOM BUCKET S3" #Le nom de votre bucket sur AWS S3
 ```
 ## Exécution
 - Le script exécute vérifie la présense du dossier Wordpress puis éxécute toute les fonctions dans le code principal.
-```
+```python
 python ./backup.py
 
 python3 ./backup.py
