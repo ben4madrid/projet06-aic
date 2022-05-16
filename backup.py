@@ -31,7 +31,7 @@ BACKUP_NAME =  BACKUP_PATH+'/sauvegarde'+str(BACKUP_DATE)
 bucket = "NOM_BUCKET" #Mettre le nom de ton Bucket S3
 ROOTDIR = '/usr/local/bin/'
 
-##### Regex to get back login information to Database #######
+##### Regex pour récupérer les informations de connexion à la base de données #######
 
 def WPregex(HOMEPATH):
     wpconfigfile = os.path.normpath(HOMEPATH +"/wp-config.php")
@@ -67,7 +67,7 @@ def WPDBDump(db_details):
     return(BACKUP_NAME_SQL)
 
 
-####### Fichier Compressé ############
+####### Fichiers Compressés ############
 def WPBackupTar(HOMEPATH,BACKUP_BDD):
 
     backup_bz2 = tarfile.open(BACKUP_PATH+'/sauvegarde'+str(BACKUP_DATE)+'.tar.bz2','w:bz2') # path of  local save folder (tar.bz2)
