@@ -120,7 +120,7 @@ Default output format [None]: python
 - Pas de chiffrement des credentials __ATTENTION AUX DROITS__ donnés
 
 ## Creation du MariaDB BUMP ########
-```
+```python
 def WPDBDump(db_details):
 
     USER = db_details['mon_user_admin'] #User admin de la BDD
