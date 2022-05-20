@@ -36,13 +36,11 @@ ROOTDIR = '/usr/local/bin/'
 
 ##### Regex pour récupérer les informations de connexion à la base de données #######
 
-    #
-    It takes the path to the wp-config.php file as an argument, opens it, reads it, and then uses regex
-    to extract the database name, user, password, and host
+    # Il prend le chemin vers le fichier wp-config.php comme argument, l'ouvre, le lit, puis utilise regex
+    # pour extraire le nom de la base de données, l'utilisateur, le mot de passe et l'hôte
+    # :param HOMEPATH : Le chemin vers l'installation de WordPress
+    # :return : un dictionnaire avec les clés et les valeurs de la base de données, de l'utilisateur, du mot de passe et de l'hôte
     
-    :param HOMEPATH: The path to the WordPress installation
-    :return: A dictionary with the keys and values of the database, user, password, and host.
-    #
 
 def WPregex(HOMEPATH):
     wpconfigfile = os.path.normpath(HOMEPATH +"/wp-config.php")
@@ -64,6 +62,10 @@ def WPregex(HOMEPATH):
 
 ##### Creation du MariaDB BUMP ########
 
+# Il prend un dictionnaire comme argument et renvoie une chaîne
+# :param db_details : il s'agit d'un dictionnaire contenant les détails de la base de données
+# :return : Le nom du fichier de sauvegarde
+
 def WPDBDump(db_details):
 
     USER = db_details['mon_user_admin'] #User admin de la BDD
@@ -79,6 +81,12 @@ def WPDBDump(db_details):
 
 
 ####### Fichiers Compressés ############
+
+# Il crée une archive tar.bz2 du dossier wordpress et la sauvegarde de la base de données
+# :param HOMEPATH : le chemin d'accès au dossier que vous souhaitez sauvegarder
+# :param BACKUP_BDD : le chemin vers le fichier de sauvegarde de la base de données
+# :return: L'objet tarfile
+
 def WPBackupTar(HOMEPATH,BACKUP_BDD):
 
     backup_bz2 = tarfile.open(BACKUP_PATH+'/sauvegarde'+str(BACKUP_DATE)+'.tar.bz2','w:bz2') # path of  local save folder (tar.bz2)
@@ -90,6 +98,11 @@ def WPBackupTar(HOMEPATH,BACKUP_BDD):
 
 
 ######## Fichier Copie vers S3 ########
+
+# Il prend un nom de fichier en entrée et le télécharge sur S3
+# :param bz2FILE : nom du fichier à télécharger sur S3
+# :return : Le nom du fichier qui a été chargé sur S3
+
 def CopietoS3(bz2FILE):
 
     cmd = "{}aws s3 cp {} s3://{}/ ".format(\
