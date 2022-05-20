@@ -36,13 +36,13 @@ ROOTDIR = '/usr/local/bin/'
 
 ##### Regex pour récupérer les informations de connexion à la base de données #######
 
-    """
+    #
     It takes the path to the wp-config.php file as an argument, opens it, reads it, and then uses regex
     to extract the database name, user, password, and host
     
     :param HOMEPATH: The path to the WordPress installation
     :return: A dictionary with the keys and values of the database, user, password, and host.
-    """
+    #
 
 def WPregex(HOMEPATH):
     wpconfigfile = os.path.normpath(HOMEPATH +"/wp-config.php")
