@@ -12,6 +12,7 @@ _date    = "10/05/22"
 
 ##########################################################################
 
+# Importation des modules nécessaires à l'exécution du script
 import os
 import sys
 import re
@@ -24,6 +25,8 @@ import time
 from boto3 import client
 
 ##### Variables Initialisations #######
+
+# Définition des variables
 HOMEPATH = '/ton/chemin/dossier/wordpress' #Mettre le chemin du dossier Wordpress
 BACKUP_DATE = datetime.datetime.now().strftime("%d-%m-%Y-%H:%M:%S")
 BACKUP_PATH = '/ton/chemin/dossier/sauvegarde/wordpress/' #Mettre le chemin du dossier de Sauvegarde
@@ -32,6 +35,14 @@ bucket = "NOM_BUCKET" #Mettre le nom de ton Bucket S3
 ROOTDIR = '/usr/local/bin/'
 
 ##### Regex pour récupérer les informations de connexion à la base de données #######
+
+    """
+    It takes the path to the wp-config.php file as an argument, opens it, reads it, and then uses regex
+    to extract the database name, user, password, and host
+    
+    :param HOMEPATH: The path to the WordPress installation
+    :return: A dictionary with the keys and values of the database, user, password, and host.
+    """
 
 def WPregex(HOMEPATH):
     wpconfigfile = os.path.normpath(HOMEPATH +"/wp-config.php")
