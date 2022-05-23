@@ -114,6 +114,11 @@ def CopietoS3(bz2FILE):
 
 
 ######### Verification du fichier dans AWS S3 ############
+
+# Cette fonction prend un fichier bz2 comme argument et renvoie la taille du fichier en octets
+# :param bz2FILE : le nom du fichier que vous souhaitez vérifier dans S3
+# :return : Le file_bucket est renvoyé
+
 def veriftoS3(bz2FILE):
 
     s3 = boto3.resource('s3')
@@ -122,6 +127,16 @@ def veriftoS3(bz2FILE):
     return (file_bucket)
 
 ######### Suppression du fichier en LOCAL ############
+
+# Si la variable veriftoS3 existe, supprimez les fichiers bz2FILE et BACKUP_BDD."
+# La fonction s'appelle ainsi :
+# Fileremove(bz2FILE,BACKUP_BDD,veriftoS3)
+# La variable veriftoS3 est définie dans la fonction S3_upload
+# :param bz2FILE : le nom du fichier que vous souhaitez télécharger sur S3
+# :param BACKUP_BDD : Le nom du fichier de sauvegarde
+# :param veriftoS3 : Ceci est la sortie de la fonction upload_file
+
+
 def Fileremove(bz2FILE,BACKUP_BDD,veriftoS3):
     try:
        veriftoS3
