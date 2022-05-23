@@ -48,8 +48,8 @@ service mysql start
 - Création de la BDD mysql
 ```
 mysql -u root -p
-CREATE DATABASE wp_database; # Création de la table
-CREATE USER user@localhost IDENTIFIED BY 'mot_de_passe'; # Création de l'user et du mot de passe
+CREATE DATABASE wp_database; 				 #Création de la table
+CREATE USER user@localhost IDENTIFIED BY 'mot_de_passe'; #Création de l'user et du mot de passe
 GRANT ALL PRIVILEGES ON wp_database.* TO user@localhost; 
 FLUSH PRIVILEGES;
 exit
