@@ -41,7 +41,6 @@ ROOTDIR = '/usr/local/bin/'
     # :param HOMEPATH : Le chemin vers l'installation de WordPress
     # :return : un dictionnaire avec les clés et les valeurs de la base de données, de l'utilisateur, du mot de passe et de l'hôte
     
-
 def WPregex(HOMEPATH):
     wpconfigfile = os.path.normpath(HOMEPATH +"/wp-config.php")
     with open(wpconfigfile) as fh:
@@ -135,7 +134,6 @@ def veriftoS3(bz2FILE):
 # :param bz2FILE : le nom du fichier que vous souhaitez télécharger sur S3
 # :param BACKUP_BDD : Le nom du fichier de sauvegarde
 # :param veriftoS3 : Ceci est la sortie de la fonction upload_file
-
 
 def Fileremove(bz2FILE,BACKUP_BDD,veriftoS3):
     try:
