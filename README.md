@@ -1,6 +1,5 @@
-# OPENCLASSROOMS - AIC
 __________________________________________________________________
-# Projet 06 : Participez à la vie de la communauté Open Source    #
+# OPENCLASSROOMS - AIC - Projet 06 : Participez à la vie de la communauté Open Source    #
 __________________________________________________________________
 
 ## Script de Sauvegarde de notre serveur Web avec le CMS Wordpress et sa base de Donnée vers AWS S3 #
