@@ -123,10 +123,10 @@ Default output format [None]: python
 ```python
 def WPDBDump(db_details):
 
-    USER = db_details['mon_user_admin'] #User admin de la BDD
+    USER = db_details['mon_user_admin'] 	#User admin de la BDD
     DBPASSWORD = db_details['mon_mot_de_passe'] #Mot de passe de la BDD
-    DBHOST = db_details['localhost'] #BDD Héberger sur la machine
-    DBNAME = db_details['ma_base_de_donnees'] #Nom de ta table BDD
+    DBHOST = db_details['localhost'] 		#BDD Héberger sur la machine
+    DBNAME = db_details['ma_base_de_donnees']	#Nom de ta table BDD
     [...]
 ```
 
@@ -136,9 +136,9 @@ __________________________________________________________________
 
 ## Variable à modifier 
 ```python
-- HOMEPATH = 'Dossier de votre site Wordpress' #Exemple : '/var/www/html'
+- HOMEPATH = 'Dossier de votre site Wordpress' 		#Exemple : '/var/www/html'
 - BACKUP_PATH = 'chemin de votre dossier de sauvegarde' #Exemple : '/home/user/Sauvegarde'
-- bucket = "NOM BUCKET S3" #Le nom de votre bucket sur AWS S3
+- bucket = "NOM BUCKET S3" 				#Le nom de votre bucket sur AWS S3
 ```
 ## Exécution
 - Le script exécute vérifie la présense du dossier Wordpress puis éxécute toute les fonctions dans le code principal.
